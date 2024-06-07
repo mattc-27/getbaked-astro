@@ -4,12 +4,16 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
+    "start": "node ./dist/server/entry.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.10.0"
+    "@astrojs/node": "^8.2.5",
+    "@astrojs/react": "^3.4.0",
+    "astro": "^4.10.0",
+    "nanostores": "^0.10.3",
+    "node-fetch": "^3.3.2"
   }
 }

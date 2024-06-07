@@ -1,0 +1,24 @@
+---
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+import '../../styles/wp.css';
+const { slug } = Astro.params;
+let res = await fetch(`https://getbaked.blog/wp-json/wp/v2/posts?slug=${slug}`);
+let [post] = await res.json();
+
+// The getStaticPaths() is required for static Astro sites.
+// If using SSR, you will not need this function.
+
+---
+
+<ArticleLayout title={post.title.rendered}>
+  <article class="recipe-container">
+   
+      <div class="recipe-title">
+        <h1 set:html={post.title.rendered} />
+      </div>
+
+      <Fragment set:html={post.content.rendered} />
+
+  </article>
+
+</ArticleLayout>

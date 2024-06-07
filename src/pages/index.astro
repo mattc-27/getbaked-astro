@@ -1,16 +1,73 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/styles.css";
+import { getRandomItem } from "../../scripts";
+
+const res = await fetch(
+  "https://www.getbaked.blog/wp-json/wp/v2/posts?categories=4&fields_author,title,slug&_embed"
+);
+const posts = await res.json();
+const featuredPost = await getRandomItem(posts);
+console.log("random post", featuredPost);
+
+const data = await fetch(
+  "https://www.getbaked.blog/wp-json/wp/v2/posts?categories=1"
+);
+const articles = await data.json();
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <section class="welcome-page">
+    <div class="welcome-section">
+      <div class="welcome-content">
+        <h3>Welcome to GetBakedWith.Me!</h3>
+        <!--   <p>
+			Join me for delightful tales from my kitchen, where every recipe is
+			crafted with love and shared with joy.
+		  </p>
+		  <p>
+			<a href="/recipes">Explore delectable recipes</a>, baking tips, and
+			sweet inspirations that will take your adventures to new highs.
+		  </p>
+		  -->
+      </div>
+    </div>
+    <div class="featured-section">
+      <div class="homepage-recipes">
+        <img
+          class="featuredImg"
+          src={featuredPost._embedded["wp:featuredmedia"][0].media_details.sizes
+            .large.source_url}
+        />
+        <a href={`/recipes/${featuredPost.slug}/`}>
+          <h2 set:html={featuredPost.title.rendered} />
+        </a>
+      </div>
+	  <div class="featured-articles">
+        <div class="featured-posts-title">
+          <h2>Featured posts</h2>
+        </div>
+        <div class="featured-col">
+          {
+            articles.map((article) => (
+              <div class="article-card">
+                <div class="article-card-content">
+                  <div class="article-title">
+                    <h2 set:html={article.title.rendered} />
+                  </div>
+                  <p>{article.date}</p>
+                  <p class="view-btn">
+                    <button class="viewArticleBtn">
+                      <a href={`/articles/${article.slug}/`}>View</a>
+                    </button>
+                  </p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/styles.css";
+
+const allPosts = await Astro.glob('../pages/articles/*.md');
+const pageTitle = "Article Collection";
+
+const res = await fetch("https://www.getbaked.blog/wp-json/wp/v2/posts?categories=1");
+    const posts = await res.json();
+    console.log(posts)
+
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <section class="recipe-page">
+        <h1>List of articles</h1>
+    {
+        posts.map((post) => (
+            <h2 set:html={post.title.rendered} />
+    
+            <a href={`/articles/${post.slug}/`}>set:html={post.title.rendered}</a>
+        ))
+      }
+  </section>
+</BaseLayout>

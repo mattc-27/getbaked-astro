@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap&family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Hammersmith+One&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&family=Playfair+Display:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -70,7 +70,7 @@ header {
 .header-nav a {
     font-size: 1em;
     font-weight: 300;
-    font-family: "Lato", sans-serif;
+    font-family: "Figtree", sans-serif;
     width: 100%;
 }
 
@@ -105,7 +105,7 @@ header {
 /*  =======
 ========== */
 footer {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Figtree', sans-serif;
     height: 299px;
     width: 100%;
     max-width: 100%;
@@ -233,8 +233,8 @@ HOME PAGE
 .welcome-section {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 98%;
     margin: 0% 0.5%;
@@ -247,10 +247,9 @@ HOME PAGE
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    text-align: left;
     color: #06142E;
     line-height: 2.5;
-  /* 
+    /* 
     position: absolute;
     z-index: 7000;
     top: 15%;
@@ -260,15 +259,14 @@ HOME PAGE
 
 .welcome-content h3 {
     font-weight: 400;
-    font-size: 5em;
+    font-size: 7em;
     width: 100%;
-    max-width: 79%;
-    color: #939398;
-    font-family: 'Albert Sans';
+    max-width: 100%;
+    font-family: 'Shadows Into Light';
+    color: #a9bbac;
 }
 
 .welcome-content a {
-    flex-wrap: wrap;
     font-weight: 200;
     font-size: 1em;
     width: 100%;
@@ -276,11 +274,9 @@ HOME PAGE
     font-weight: 300;
     text-decoration: underline;
     color: #06142E;
-    font-family: 'Barlow';
 }
 
 .welcome-content p {
-    flex-wrap: wrap;
     font-weight: 200;
     font-size: 2em;
     width: 100%;
@@ -297,15 +293,7 @@ SEARCH
 
 
 ---------------------- */
-.featured-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 100%;
-    margin: 0% 0.5%;
-    min-height: 60vh;
-}
+
 
 .homepage-recipes {
     display: flex;
@@ -317,12 +305,73 @@ SEARCH
     margin: 0;
     color: #56433e;
     margin: 0.5%;
-/*     position: relative;
+    /*     position: relative;
     left: 20%;
     top: 10%;
     z-index: 5699;*/
 }
 
+.featured-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.featured-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    line-height: 2.5;
+    width: 100%;
+    max-width: 49%;
+    height: 100%;
+    margin: 0;
+    color: #06142E;
+}
+
+.featured-banner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 99%;
+    width: 100%;
+    height: auto;
+    color: #56433e;
+    margin: 0.5%;
+}
+
+.featured-border {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+    border: 0.5px solid #4b4b4b51;
+    height: 100%;
+    box-shadow: 0 1px 3px rgba(75, 75, 75, 0.318);
+}
+
+.featured-banner img {
+    max-width: 80%;
+    max-height: 50%;
+    border-radius: 10px;
+}
+
+.featured-banner h2,
+.featured-banner a {
+    font-size: 1.5em;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    margin: 0.5%;
+    font-family: "Figtree";
+}
 .featured-articles {
     display: flex;
     flex-direction: column;
@@ -334,55 +383,21 @@ SEARCH
     margin: 0;
     color: #06142E;
 }
-
-.featured-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100%;
-    margin: 0.5%;
-    line-height: 2.5;
-    width: 100%;
-}
-
-.featuredImg {
-    max-width: 59%;
-    width: 100%;
-}
-
-.featuredImg img {
-    max-width: 69%;
-    border: 1px solid red;
-}
-
-.homepage-recipes a {
-    max-width: 79%;
-    width: 100%;
-    margin: 3% 0.5% 1% 0.5%;
-    font-size: 2em;
-    font-family: 'Albert Sans', sans-serif;
-    text-align: left;
-}
-
-.homepage-recipes a h2 {
-    font-weight: 500;
-    color: #253331;
-}
-
 .featured-posts-title {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     width: 100%;
     text-align: left;
+
 }
 
 .featured-posts-title h2 {
     font-size: 2.5em;
     width: 100%;
     text-align: left;
-    font-family: 'Albert Sans', sans-serif;
+    color: #06142E;
+    font-family: "Figtree";
     font-weight: 400;
     max-width: 99%;
 }
@@ -416,43 +431,38 @@ SEARCH
     text-align: left;
     width: 100%;
     margin: 0.5%;
+    color: #06142E;
+    font-family: "Figtree", sans-serif;
 }
 
 .article-card p {
     text-align: left;
     width: 100%;
     font-size: 1.25em;
-    color: #253331;
-    font-family: 'Barlow';
+    color: #06142E;
+    font-family: "Figtree", sans-serif;
 }
 
 .article-title h2 {
     font-size: 1.25em;
     font-weight: 600;
-    color: #253331;
+    color: #06142E;
     text-align: left;
     width: 100%;
-    font-family: 'Barlow';
+    font-family: "Figtree", sans-serif;
 }
 
 .article-title a {
     width: 100%;
     text-align: left;
     text-decoration: none;
+    color: #06142E;
+    font-family: "Figtree", sans-serif;
 }
 
 .article-title a:hover {
     text-decoration: underline;
 }
-
-.btnRow {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-}
-
 .view-btn {
     width: 100%;
     max-width: 98%;
@@ -472,21 +482,34 @@ SEARCH
     background-color: transparent;
     cursor: pointer;
     color: #253331;
+    font-family: "Figtree", sans-serif;
 }
 
 .viewArticleBtn a {
     text-decoration: none;
     color: #062c96;
     padding: 0.5em 1em;
+    font-family: "Figtree", sans-serif;
     /* Optional: to provide some spacing inside the button */
 }
+.btnRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
 
 
 /* --
 BREAKPOINTS
 -- */
 
-@media only screen and (orientation: landscape) {}
+@media only screen and (orientation: landscape) {
+
+}
 
 
 @media only screen and (min-width: 700px) {
@@ -534,7 +557,7 @@ BREAKPOINTS
 
     .welcome-section {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
         width: 100%;
@@ -548,16 +571,168 @@ BREAKPOINTS
         justify-content: flex-start;
         align-items: flex-start;
         max-height: fit-content;
-        text-align: left;
-        margin: 1%;
+        text-align: center;
         width: 100%;
+
+        margin: 1%;
         max-width: 99%;
         color: #06142E;
         line-height: 2.5;
-    /*     position: absolute;
+        /*     position: absolute;
         z-index: 7000;*/
     }
 
+    .featured-section {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .featured-banner {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        max-width: 99%;
+        width: 100%;
+        height: auto;
+        color: #56433e;
+        margin: 0.5%;
+    }
+    
+    .featured-border {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 79%;
+        border: 0.5px solid #4b4b4b51;
+        height: 100%;
+        box-shadow: 0 1px 3px rgba(75, 75, 75, 0.318);
+    }
+
+
+    .featured-articles {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 69%;
+        height: 100%;
+        margin: 0;
+        color: #06142E;
+    }
+    .featured-posts-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .featured-posts-title h2 {
+        font-size: 2.5em;
+        width: 100%;
+        text-align: left;
+        color: #06142E;
+        font-family: "Figtree";
+        font-weight: 400;
+        max-width: 99%;
+    }
+    
+    .article-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+        height: 100%;
+        max-height: 80%;
+        margin: 2% 0;
+        border-bottom: 1px solid #252525;
+    }
+    
+    .article-card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+        margin: 1%;
+    }
+    
+    .article-title {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        width: 100%;
+        margin: 0.5%;
+        color: #06142E;
+        font-family: "Figtree", sans-serif;
+    }
+    
+    .article-card p {
+        text-align: left;
+        width: 100%;
+        font-size: 1.25em;
+        color: #06142E;
+        font-family: "Figtree", sans-serif;
+    }
+    
+    .article-title h2 {
+        font-size: 1.25em;
+        font-weight: 600;
+        color: #06142E;
+        text-align: left;
+        width: 100%;
+        font-family: "Figtree", sans-serif;
+    }
+    
+    .article-title a {
+        width: 100%;
+        text-align: left;
+        text-decoration: none;
+        color: #06142E;
+        font-family: "Figtree", sans-serif;
+    }
+    
+    .article-title a:hover {
+        text-decoration: underline;
+    }
+    .view-btn {
+        width: 100%;
+        max-width: 98%;
+    }
+    
+    .viewArticleBtn {
+        height: 4em;
+        width: 100%;
+        max-width: 35%;
+        /* Changed from 100% */
+        font-size: 0.5em;
+        text-align: center;
+        /* Changed from center */
+        align-self: flex-start;
+        border-radius: 5px;
+        border: 0.5px solid #253331;
+        background-color: transparent;
+        cursor: pointer;
+        color: #253331;
+        font-family: "Figtree", sans-serif;
+    }
+    
+    .viewArticleBtn a {
+        text-decoration: none;
+        color: #062c96;
+        padding: 0.5em 1em;
+        font-family: "Figtree", sans-serif;
+        /* Optional: to provide some spacing inside the button */
+    }
 
     /*  ===============
 | HEADER FOOTER
@@ -565,7 +740,6 @@ BREAKPOINTS
     header {
         height: 150px;
         background: #f1f5f9;
-        ;
         width: 100vw;
         max-width: 100%;
     }
@@ -589,7 +763,8 @@ BREAKPOINTS
     .header-title {
         flex-grow: 1;
         max-width: 99%;
-        color: #ee8888;
+        color: #1d1c28;
+        font-family: 'Raleway';
     }
 
     .header-nav {
